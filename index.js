@@ -5,6 +5,7 @@ const fs = require('fs');
 const htmlPath = path.join(__dirname, './public/index.html');
 const cssPath = path.join(__dirname, './public/style.css');
 const dataPath = path.join(__dirname, 'data.json'); 
+const scriptPath = path.join(__dirname, './public/script.js');
 
 function readData(){
     const data = fs.readFileSync(dataPath, 'utf-8');
@@ -20,7 +21,11 @@ const server = http.createServer((req, res) => {
     const html = fs.readFileSync(htmlPath, 'utf-8');
     res.writeHead(200, {'Content-type' : 'text/html'});
     res.end(html);
-  } else if (pathName === "/style.css") {
+  }else if(pathName === '/script.js'){
+    const js = fs.readFileSync(scriptPath, 'utf-8');
+    res.writeHead(200, {'Content-type': 'text/javascript'});
+    res.end(js);
+  }else if (pathName === "/style.css") {
     const css = fs.readFileSync(cssPath, 'utf-8');
     res.writeHead(200, {'Content-type' : 'text/css'});
     res.end(css);

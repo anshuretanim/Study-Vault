@@ -1,6 +1,8 @@
 const totalResources = document.getElementById("totalResources");
 const completedResources = document.getElementById("completedResources");
 const pendingResources = document.getElementById("pendingResources");
+const subjectFilter = document.getElementById("subjectFilter");
+const statusFilter = document.getElementById("statusFilter");
 
 async function loadResources(){
     const response = await fetch('/api/resources');
@@ -37,7 +39,7 @@ if(subjectFilter.value === 'all' && statusFilter.value === 'all'){
 
 
 }
-
+loadResources();
 
 
 
