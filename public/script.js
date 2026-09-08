@@ -4,6 +4,8 @@ const pendingResources = document.getElementById("pendingResources");
 const subjectFilter = document.getElementById("subjectFilter");
 const statusFilter = document.getElementById("statusFilter");
 
+subjectFilter.addEventListener("change", loadResources);
+
 async function loadResources(){
     const response = await fetch('/api/resources');
     const resources = await response.json();
@@ -32,9 +34,13 @@ function countFalse(){
     let allPending = countFalse();
 
 if(subjectFilter.value === 'all' && statusFilter.value === 'all'){
-        totalResources.innerText = allTotal;
+    totalResources.innerText = allTotal;
     completedResources.innerText = allCompleted;
     pendingResources.innerText = allPending;
+}else {
+    totalResources.innerText = 0;
+    completedResources.innerText = 0;
+    pendingResources.innerText = 0;
 }
 
 
