@@ -1,3 +1,7 @@
+const totalResources = document.getElementById("totalResources");
+const completedResources = document.getElementById("completedResources");
+const pendingResources = document.getElementById("pendingResources");
+
 async function loadResources(){
     const response = await fetch('/api/resources');
     const resources = await response.json();
@@ -24,11 +28,17 @@ function countFalse(){
     let allTotal = resources.length;
     let allCompleted = countTrue();
     let allPending = countFalse();
+
+if(subjectFilter.value === 'all' && statusFilter.value === 'all'){
+        totalResources.innerText = allTotal;
+    completedResources.innerText = allCompleted;
+    pendingResources.innerText = allPending;
+}
+
+
 }
 
 
 
-const totalResources = document.getElementById("totalResources");
-const completedResources = document.getElementById("completedResources");
-const pendingResources = document.getElementById("pendingResources");
+
 
