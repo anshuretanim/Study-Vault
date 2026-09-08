@@ -5,48 +5,49 @@ const subjectFilter = document.getElementById("subjectFilter");
 const statusFilter = document.getElementById("statusFilter");
 
 subjectFilter.addEventListener("change", loadResources);
+statusFilter.addEventListener("change", loadResources);
 
-async function loadResources(){
-    const response = await fetch('/api/resources');
-    const resources = await response.json();
-let count = 0;
-let countF = 0;
-function countTrue(){
-    for(let i = 0; i<resources.length; i++){
-        if(resources[i].completed === true){
-            count++;
-        }
+async function loadResources() {
+  const response = await fetch("/api/resources");
+  const resources = await response.json();
+  let countT = 0;
+  let countF = 0;
+  let countL = 0;
+  function countLength(name) {
+    for (let i = 0; i < resources.length; i++) {
+      if (resources[i].subject === name) {
+        countL++;
+      }
     }
-    return count;
-}
+    return countL;
+  }
 
-function countFalse(){
-    for(let i = 0; i<resources.length; i++){
-        if(resources[i].completed === false){
-            countF++;
-        }
+  function countTrue(name) {
+    for (let i = 0; i < resources.length; i++) {
+      if (resources[i].completed === true && resources[i].subject === name) {
+        countT++;
+      }
+    }
+    return countT;
+  }
+
+  function countFalse(name) {
+    for (let i = 0; i < resources.length; i++) {
+      if (resources[i].completed === false && resources[i].subject === name) {
+        countF++;
+      }
     }
     return countF;
-}
+  }
 
-    let allTotal = resources.length;
-    let allCompleted = countTrue();
-    let allPending = countFalse();
+  let allTotal = countLength(subjectFilter.value);
+  let allCompleted = countTrue(subjectFilter.value);
+  let allPending = countFalse(subjectFilter.value);
 
-if(subjectFilter.value === 'all' && statusFilter.value === 'all'){
+
     totalResources.innerText = allTotal;
     completedResources.innerText = allCompleted;
     pendingResources.innerText = allPending;
-}else {
-    totalResources.innerText = 0;
-    completedResources.innerText = 0;
-    pendingResources.innerText = 0;
-}
-
-
+  
 }
 loadResources();
-
-
-
-
