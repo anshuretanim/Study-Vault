@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "JavaScript Array Methods",
+    "subject": "Web Development",
+    "type": "video",
+    "difficulty": "beginner",
+    "completed": true,
+    "rating": 5,
+    "description": "Learn map, filter, reduce, find, and other useful JavaScript array methods.",
+    "url": "https://example.com/javascript-arrays"
+  },
+  {
+    "id": 2,
+    "title": "Pointers in C",
+    "subject": "Programming",
+    "type": "notes",
+    "difficulty": "intermediate",
+    "completed": false,
+    "rating": 4,
+    "description": "Understand pointers, memory addresses, dereferencing, and pointer arithmetic in C.",
+    "url": "https://example.com/c-pointers"
+  },
+  {
+    "id": 3,
+    "title": "Binary Trees",
+    "subject": "DSA",
+    "type": "video",
+    "difficulty": "advanced",
+    "completed": false,
+    "rating": 5,
+    "description": "Learn the structure of binary trees along with traversal techniques such as inorder, preorder, and postorder.",
+    "url": "https://example.com/binary-trees"
+  },
+  {
+    "id": 4,
+    "title": "Probability Distributions",
+    "subject": "Statistics",
+    "type": "notes",
+    "difficulty": "intermediate",
+    "completed": true,
+    "rating": 4,
+    "description": "Study probability mass functions, probability density functions, expectation, and variance.",
+    "url": "https://example.com/probability-distributions"
+  },
+  {
+    "id": 5,
+    "title": "HTTP Fundamentals",
+    "subject": "Backend Development",
+    "type": "article",
+    "difficulty": "beginner",
+    "completed": false,
+    "rating": 3,
+    "description": "Understand HTTP requests, responses, methods, status codes, headers, and URLs.",
+    "url": "https://example.com/http-fundamentals"
+  },
+  {
+    "id": 6,
+    "title": "React State Management",
+    "subject": "Web Development",
+    "type": "video",
+    "difficulty": "intermediate",
+    "completed": false,
+    "rating": 4,
+    "description": "Learn how state works in React and how components can respond to state changes.",
+    "url": "https://example.com/react-state"
+  },
+  {
+    "id": 7,
+    "title": "SQL Joins",
+    "subject": "Databases",
+    "type": "article",
+    "difficulty": "intermediate",
+    "completed": true,
+    "rating": 5,
+    "description": "Learn INNER JOIN, LEFT JOIN, RIGHT JOIN, and how to combine data from multiple tables.",
+    "url": "https://example.com/sql-joins"
+  },
+  {
+    "id": 8,
+    "title": "Sorting Algorithms",
+    "subject": "DSA",
+    "type": "notes",
+    "difficulty": "beginner",
+    "completed": false,
+    "rating": 4,
+    "description": "Compare bubble sort, selection sort, insertion sort, merge sort, and quicksort.",
+    "url": "https://example.com/sorting"
+  },
+  {
+    "id": 9,
+    "title": "Node.js File System",
+    "subject": "Backend Development",
+    "type": "video",
+    "difficulty": "intermediate",
+    "completed": true,
+    "rating": 5,
+    "description": "Learn how Node.js can read, write, update, and delete files using the fs module.",
+    "url": "https://example.com/node-fs"
+  },
+  {
+    "id": 10,
+    "title": "Karnaugh Maps",
+    "subject": "Digital Electronics",
+    "type": "notes",
+    "difficulty": "intermediate",
+    "completed": false,
+    "rating": 3,
+    "description": "Learn how Karnaugh maps simplify Boolean expressions and digital logic circuits.",
+    "url": "https://example.com/karnaugh-maps"
+  }
+]
